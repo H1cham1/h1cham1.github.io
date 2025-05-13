@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -9,19 +10,29 @@ import Over from './pages/Over';
 
 import './App.css';
 
+function AnimatedRoutes() {
+  const location = useLocation();
+
+  return (
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<Home />} />
+        <Route path="/ervaringen" element={<Ervaringen />} />
+        <Route path="/projecten" element={<Projecten />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/over" element={<Over />} />
+      </Routes>
+    </AnimatePresence>
+  );
+}
+
 function App() {
   return (
     <Router>
       <div className="layout">
         <Header />
         <main className="mainContent">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/ervaringen" element={<Ervaringen />} />
-            <Route path="/projecten" element={<Projecten />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/over" element={<Over />} />
-          </Routes>
+          <AnimatedRoutes />
         </main>
         <Footer />
       </div>
