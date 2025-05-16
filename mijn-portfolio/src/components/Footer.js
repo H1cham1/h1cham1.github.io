@@ -1,16 +1,38 @@
 import styles from './Footer.module.css';
+import { FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
 
 function Footer() {
+    const lastUpdated = '15 mei 2025';
+
     return (
         <footer className={styles.footer}>
             <div className={styles.left}>
                 <p>© {new Date().getFullYear()} Hicha. Alle rechten voorbehouden.</p>
+                <p className={styles.updated}>Laatste update: {lastUpdated}</p>
             </div>
+
             <div className={styles.right}>
-                <p className={styles.heading}>Socials</p>
-                <a href="https://www.linkedin.com/in/jouw-linkedin" target="_blank" rel="noreferrer">LinkedIn</a>
-                <a href="https://www.instagram.com/jouw-instagram" target="_blank" rel="noreferrer">Instagram</a>
-                <a href="https://github.com/jouw-github" target="_blank" rel="noreferrer">GitHub</a>
+                <div className={styles.linksGroup}>
+                    <p className={styles.heading}>Pagina's</p>
+                    <a href="/">Home</a>
+                    <a href="/ervaringen">Ervaringen</a>
+                    <a href="/projecten">Projecten</a>
+                    <a href="/contact">Contact</a>
+                    <a href="/over">Over mij</a>
+                </div>
+
+                <div className={styles.socialsGroup}>
+                    <p className={styles.heading}>Socials</p>
+                    <a href="https://www.linkedin.com/in/hicham-tahiri-7483b5281/" target="_blank" rel="noreferrer" className={styles.link}>
+                        <FaLinkedin className={styles.icon} /> LinkedIn
+                    </a>
+                    <a href="https://www.instagram.com/hicham__5314/" target="_blank" rel="noreferrer" className={styles.link}>
+                        <FaInstagram className={styles.icon} /> Instagram
+                    </a>
+                    <a href="https://github.com/H1cham1" target="_blank" rel="noreferrer" className={styles.link}>
+                        <FaGithub className={styles.icon} /> GitHub
+                    </a>
+                </div>
             </div>
         </footer>
     );

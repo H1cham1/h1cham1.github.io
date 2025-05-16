@@ -23,7 +23,7 @@ function Home() {
         <motion.div
             ref={homeRef}
             className={styles.home}
-            initial={{ y: '-100vh', opacity: 0 }}
+            initial={{ y: '-110vh', opacity: 1 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
         >

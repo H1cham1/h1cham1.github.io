@@ -1,0 +1,38 @@
+.over {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 5vw;
+}
+
+.intro {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+    max-width: 800px;
+}
+
+.blocks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.block {
+    flex: 1 1 calc(50% - 10px);
+    background-color: #e6f0ff;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #003366;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.block:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}

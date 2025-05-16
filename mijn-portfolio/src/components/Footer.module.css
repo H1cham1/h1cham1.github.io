@@ -1,26 +1,37 @@
 .footer {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch;
     flex-wrap: wrap;
     padding: 20px 5vw;
     background-color: #f5f5f5;
-    color: #666;
+    color: #000000;
     font-size: 0.9rem;
     border-top: 1px solid #ddd;
-    position: relative;
+    gap: 40px;
+    min-height: 150px;
+    max-width: 2000px;
 }
 
 .left {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.updated {
+    margin-top: 8px;
+    font-size: 0.8rem;
+    color: #999;
 }
 
 .right {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-    text-align: right;
+    flex-direction: row;
+    gap: 60px;
+    flex-wrap: wrap;
 }
 
 .heading {
@@ -29,12 +40,43 @@
     color: #333;
 }
 
-.right a {
-    color: #007bff;
+/* === SOCIALS === */
+.socialsGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.link {
+    display: flex;
+    align-items: center;
     text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;
+}
+
+.link:hover {
+    color: #26b1fb;
+}
+
+.icon {
+    margin-right: 8px;
+    font-size: 1.5rem;
+}
+
+/* === PAGES === */
+.linksGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.linksGroup a {
+    text-decoration: none;
+    color: #000;
     transition: color 0.2s ease;
 }
 
-.right a:hover {
-    color: #0056b3;
+.linksGroup a:hover {
+    color: #2caff6;
 }

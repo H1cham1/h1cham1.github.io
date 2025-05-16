@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 function Ervaringen() {
     return (
         <motion.div
-            initial={{ y: '-100vh', opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: '100vh', opacity: 0 }}
+            initial={{ x: '-100vw', opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: '100vw', opacity: 0 }}
             transition={{ type: 'tween', duration: 0.5 }}
         >
             <h1>Ervaringen</h1>
