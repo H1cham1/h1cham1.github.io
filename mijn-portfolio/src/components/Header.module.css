@@ -42,13 +42,14 @@
 
 /* == SLIDE-IN MENU == */
 .slideMenu {
-    position: absolute;
+    position: fixed;
+    /* <-- FIX: was absolute */
     top: 60px;
     right: 0;
     background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-    /* Correcte richting: van donker naar licht van rechts naar links */
     padding: 16px;
     min-width: 180px;
+    max-width: 80vw;
     border-radius: 8px 0 0 8px;
     box-shadow: -6px 0 20px rgba(0, 0, 0, 0.15);
     transform: translateX(100%);
@@ -61,18 +62,15 @@
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Zorg ervoor dat de menu's zichtbaar zijn wanneer open */
 .slideMenu.open {
     transform: translateX(0);
     opacity: 1;
     pointer-events: auto;
-    /* Wanneer het menu open is, maak het klikbaar */
 }
 
 .slideMenu a {
     text-decoration: none;
     color: white;
-    /* Witte tekst */
     font-weight: 500;
 }
 
@@ -82,7 +80,6 @@
 
 .slideMenu button {
     all: unset;
-    /* Reset alle standaard button-styles */
     font-weight: 500;
     color: white;
     cursor: pointer;

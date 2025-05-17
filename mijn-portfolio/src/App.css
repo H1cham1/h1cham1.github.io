@@ -1,5 +1,7 @@
 body {
   overflow-y: scroll;
+  overflow-x: hidden;
+  /* <-- FIX */
   scrollbar-width: none;
   margin: 0;
   padding: 0;
@@ -16,13 +18,14 @@ body::-webkit-scrollbar {
   flex-direction: column;
   min-height: 100vh;
   position: relative;
+  overflow-x: hidden;
+  /* <-- Extra preventie */
 }
 
 .mainContent {
   flex: 1;
   padding: 20px 5vw;
   overflow: hidden;
-  /* Belangrijk voor framer-motion exit animaties */
   z-index: 1;
 }
 
