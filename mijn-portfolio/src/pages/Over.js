@@ -12,7 +12,7 @@ function Over() {
         >
             <h1>Over mij</h1>
             <p className={styles.intro}>
-                Hier is te zien wat ik allemaal doe in mijn dagelijks leven. Denk aan hobbies,
+                Op deze pagina geef ik een inkijk in wie ik ben buiten het klaslokaal. Je leest over mijn technische vaardigheden, sportieve passies, persoonlijke ontwikkeling en toekomstplannen als IT-professional.
             </p>
 
             <section className={styles.blocks}>
@@ -22,14 +22,14 @@ function Over() {
                         Ik volg momenteel het tweede jaar van de opleiding Informatica aan de Hogeschool Rotterdam.<br /><br />
                         In de afgelopen twee jaar heb ik kennis en ervaring opgedaan met diverse programmeertalen, tools en werkmethodes.
                         Hieronder een overzicht van de belangrijkste technologieën waar ik mee heb gewerkt.<br /><br />
-                        Jaar 1:<br />
+                        <strong>Jaar 1:</strong><br />
                         -Python<br />
                         -SQLite<br />
                         -C#<br />
                         -Scrum<br />
                         -Trello<br />
                         -Django<br /><br />
-                        Jaar 2:<br />
+                        <strong>Jaar 2:</strong><br />
                         -API's<br />
                         -TypeScript<br />
                         -PostgreSQL<br />
@@ -90,8 +90,13 @@ function Over() {
                 </div>
 
                 <div className={styles.block}>
-                    <h2>Games</h2>
-                    <p>Ik game graag in m’n vrije tijd. Denk aan FIFA, Valorant of een potje strategy games.</p>
+                    <h2>Overig</h2>
+                    <p>
+                        Mijn naam is Hicham Tahiri en ik ben 19 jaar oud. Sinds jonge leeftijd heb ik een sterke interesse in technologie en innovatie.<br />
+                        Buiten mijn studie besteed ik graag tijd aan sport en persoonlijke programmeerprojecten.<br /><br />
+                        Deze projecten variëren van serieuze toepassingen tot experimenten waarmee ik mijn vaardigheden en kennis verder ontwikkel.<br />
+                        Op de lange termijn wil ik bijdragen aan innovatieve softwareoplossingen die maatschappelijke impact maken.<br />
+                    </p>
                 </div>
             </section>
         </motion.div>
