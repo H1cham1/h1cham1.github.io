@@ -2,7 +2,7 @@ import styles from './Home.module.css';
 import { useNavigate } from 'react-router-dom';
 import { useRef } from 'react';
 import { motion } from 'framer-motion';
-import thumb from '../assets/duim.jpg';
+import Motion from '../assets/Motion.jpg';
 
 function Home() {
     const navigate = useNavigate();
@@ -23,7 +23,7 @@ function Home() {
         <motion.div
             ref={homeRef}
             className={styles.home}
-            initial={{ y: '-110vh', opacity: 1 }}
+            initial={{ y: '-150vh', opacity: 1 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
         >
@@ -37,7 +37,7 @@ function Home() {
                     </p>
                 </div>
                 <div className={styles.heroImage}>
-                    <img src={thumb} alt="Profielfoto" />
+                    <img src={Motion} alt="Profielfoto" />
                 </div>
             </section>
 

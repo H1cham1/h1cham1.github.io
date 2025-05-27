@@ -1,16 +1,15 @@
-/* == HEADER STYLING == */
 .header {
     position: sticky;
     top: 0;
     z-index: 999;
-    height: 60px;
+    height: 72px;
     background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     color: white;
 }
 
 .headerInner {
-    height: 60px;
+    height: 72px;
     padding: 0 40px;
     display: flex;
     justify-content: space-between;
@@ -44,7 +43,7 @@
 .slideMenu {
     position: fixed;
     /* <-- FIX: was absolute */
-    top: 60px;
+    top: 72px;
     right: 0;
     background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
     padding: 16px;
