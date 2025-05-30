@@ -35,7 +35,8 @@
 }
 
 .heroImage img {
-    width: 260px;
+    width: 200px;
+    max-width: 100%;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
     margin-left: auto;
@@ -63,13 +64,13 @@
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
     cursor: pointer;
     border: none;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .block:hover {
     background-color: #d0e2ff;
     transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
 /* == ANIMATIES == */

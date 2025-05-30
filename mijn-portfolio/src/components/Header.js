@@ -29,7 +29,6 @@ function Header() {
 
             <nav className={`${styles.slideMenu} ${menuOpen ? styles.open : ''}`}>
                 <button onClick={handleHomeClick} className={styles.menuLink}>Home</button>
-                <a href="/ervaringen" onClick={() => setMenuOpen(false)}>Ervaringen</a>
                 <a href="/projecten" onClick={() => setMenuOpen(false)}>Projecten</a>
                 <a href="/contact" onClick={() => setMenuOpen(false)}>Contact</a>
                 <a href="/over" onClick={() => setMenuOpen(false)}>Over mij</a>

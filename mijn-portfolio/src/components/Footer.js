@@ -15,7 +15,6 @@ function Footer() {
                 <div className={styles.linksGroup}>
                     <p className={styles.heading}>Pagina's</p>
                     <a href="/">Home</a>
-                    <a href="/ervaringen">Ervaringen</a>
                     <a href="/projecten">Projecten</a>
                     <a href="/contact">Contact</a>
                     <a href="/over">Over mij</a>

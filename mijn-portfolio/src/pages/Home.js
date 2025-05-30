@@ -43,10 +43,9 @@ function Home() {
 
             {/* NAVIGATIE BLOKKEN */}
             <section className={styles.blocks}>
-                <button onClick={() => handleSlide('/ervaringen', 'right')} className={styles.block}>Ervaringen</button>
-                <button onClick={() => handleSlide('/projecten', 'left')} className={styles.block}>Projecten</button>
-                <button onClick={() => handleSlide('/contact', 'right')} className={styles.block}>Contact</button>
                 <button onClick={() => handleSlide('/over', 'left')} className={styles.block}>Over mij</button>
+                <button onClick={() => handleSlide('/contact', 'right')} className={styles.block}>Contact</button>
+                <button onClick={() => handleSlide('/projecten', 'left')} className={styles.block}>Projecten</button>
             </section>
         </motion.div>
     );
