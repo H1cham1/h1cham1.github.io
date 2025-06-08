@@ -27,6 +27,7 @@ body::-webkit-scrollbar {
   padding: 20px 5vw;
   overflow: hidden;
   z-index: 1;
+  padding-top: 72px;
 }
 
 @keyframes App-logo-spin {

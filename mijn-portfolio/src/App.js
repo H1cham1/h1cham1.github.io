@@ -7,6 +7,7 @@ import Ervaringen from './pages/Ervaringen';
 import Projecten from './pages/Projecten';
 import Contact from './pages/Contact';
 import Over from './pages/Over';
+import ProjectDetail from './pages/ProjectDetail';
 
 import './App.css';
 
@@ -21,6 +22,7 @@ function AnimatedRoutes() {
         <Route path="/projecten" element={<Projecten />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/over" element={<Over />} />
+        <Route path="/projecten/:slug" element={<ProjectDetail />} />
       </Routes>
     </AnimatePresence>
   );
