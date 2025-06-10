@@ -4,6 +4,8 @@ import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import Motion from '../assets/Motion.jpg';
 
+//ALS IK ZOEK NAAR STAGE OF EEN BAAN KAN IK DIT OP DE HOMEPAGINA DUIDELIJK WEERGEVEN
+
 function Home() {
     const navigate = useNavigate();
     const homeRef = useRef(null);
