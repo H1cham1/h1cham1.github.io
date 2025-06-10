@@ -2,30 +2,30 @@ const projects = [
     {
         slug: "TableTech Website",
         title: "TableTech Website",
-        image: "TableTechWeb/TableTechWeb1.png",
+        image: "/TableTechWeb/TableTechWeb1.png",
         description: "De officiële website van TableTech waarmee horecaondernemers kennismaken met het platform. De site legt de voordelen uit, bevat call-to-actions en is geoptimaliseerd voor SEO en conversie.",
         tag: "Persoonlijk project",
         techstack: "TypeScript",
         gallery: [
-            "TableTechWeb/TableTechWeb1.png",
-            "TableTechWeb/TableTechWeb2.png"
+            "/TableTechWeb/TableTechWeb1.png",
+            "/TableTechWeb/TableTechWeb2.png"
         ]
     },
     {
         slug: "TableTech",
         title: "TableTech",
-        image: "TableTechApp/TableTech4.png",
+        image: "/TableTechApp/TableTech4.png",
         description: "Een alles-in-één dashboard voor horecazaken, waarmee personeel menu’s kan beheren, feedback kan ontvangen, voorraden bijhouden en klanttevredenheid verhogen via digitale bestel- en contactmomenten.",
         tag: "Persoonlijk project",
         techstack: "",
         gallery: [
-            "TableTechApp/TableTech1.jpeg",
-            "TableTechApp/TableTech2.jpeg",
-            "TableTechApp/TableTech3.png",
-            "TableTechApp/TableTech4.png",
-            "TableTechApp/TableTech5.png",
-            "TableTechApp/TableTech6.png",
-            "TableTechApp/TableTech7.png",
+            "/TableTechApp/TableTech1.jpeg",
+            "/TableTechApp/TableTech2.jpeg",
+            "/TableTechApp/TableTech3.png",
+            "/TableTechApp/TableTech4.png",
+            "/TableTechApp/TableTech5.png",
+            "/TableTechApp/TableTech6.png",
+            "/TableTechApp/TableTech7.png",
         ]
     },
     {
@@ -55,15 +55,15 @@ const projects = [
     {
         slug: "voetbal-app",
         title: "Voetbal-app",
-        image: "voetbal/voetbalbanner.png",
+        image: "/voetbal/voetbalbanner.png",
         description: "Een sociale voetbal-app waarin gebruikers wedstrijden kunnen voorspellen, vrienden kunnen volgen en coins verdienen voor correcte voorspellingen. Coins zijn in te wisselen voor profiel-aanpassingen of cosmetische items.",
         tag: "Persoonlijk project",
         techstack: "Frontend: React Native met JavaScript Backend: Momenteel bevat dit project nog geen backend",
         gallery: [
-            "voetbal/voetbal1.jpeg",
-            "voetbal/voetbal2.jpeg",
-            "voetbal/voetbal3.jpeg",
-            "voetbal/voetbal4.jpeg"
+            "/voetbal/voetbal1.jpeg",
+            "/voetbal/voetbal2.jpeg",
+            "/voetbal/voetbal3.jpeg",
+            "/voetbal/voetbal4.jpeg"
         ]
     },
 ];
