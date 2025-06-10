@@ -12,14 +12,6 @@ function Footer() {
             </div>
 
             <div className={styles.right}>
-                <div className={styles.linksGroup}>
-                    <p className={styles.heading}>Pagina's</p>
-                    <a href="/">Home</a>
-                    <a href="/projecten">Projecten</a>
-                    <a href="/contact">Contact</a>
-                    <a href="/over">Over mij</a>
-                </div>
-
                 <div className={styles.socialsGroup}>
                     <p className={styles.heading}>Socials</p>
                     <a href="https://www.linkedin.com/in/hicham-tahiri-7483b5281/" target="_blank" rel="noreferrer" className={styles.link}>

@@ -64,13 +64,6 @@ function Contact() {
             className={styles.container}
         >
             <div className={styles.left}>
-                <h3>Pagina's</h3>
-                <a href="/">Home</a>
-                <a href="/ervaringen">Ervaringen</a>
-                <a href="/projecten">Projecten</a>
-                <a href="/contact">Contact</a>
-                <a href="/over">Over mij</a>
-
                 <h3 style={{ marginTop: '20px' }}>Socials</h3>
                 <a href="https://www.linkedin.com/in/hicham-tahiri-7483b5281/" target="_blank" rel="noreferrer">
                     <FaLinkedin /> LinkedIn
