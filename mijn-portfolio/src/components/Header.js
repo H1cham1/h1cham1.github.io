@@ -1,9 +1,7 @@
-import { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import styles from './Header.module.css';
 
 function Header() {
-    const [menuOpen, setMenuOpen] = useState(false);
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -14,7 +12,13 @@ function Header() {
             setTimeout(() => {
                 document.body.classList.remove('slide-down');
                 navigate('/');
-            }, 500); // komt overeen met CSS animatie
+            }, 500);
+        }
+    };
+
+    const handleNavigate = (path) => {
+        if (location.pathname !== path) {
+            navigate(path);
         }
     };
 
@@ -22,17 +26,12 @@ function Header() {
         <header className={styles.header}>
             <div className={styles.headerInner}>
                 <button onClick={handleHomeClick} className={styles.logo}>Home</button>
-                <button className={styles.menuButton} onClick={() => setMenuOpen(prev => !prev)}>
-                    Menu
-                </button>
+                <nav className={styles.navLinks}>
+                    <button onClick={() => handleNavigate('/projecten')} className={styles.logo}>Projecten</button>
+                    <button onClick={() => handleNavigate('/contact')} className={styles.logo}>Contact</button>
+                    <button onClick={() => handleNavigate('/over')} className={styles.logo}>Over mij</button>
+                </nav>
             </div>
-
-            <nav className={`${styles.slideMenu} ${menuOpen ? styles.open : ''}`}>
-                <button onClick={handleHomeClick} className={styles.menuLink}>Home</button>
-                <a href="/projecten" onClick={() => setMenuOpen(false)}>Projecten</a>
-                <a href="/contact" onClick={() => setMenuOpen(false)}>Contact</a>
-                <a href="/over" onClick={() => setMenuOpen(false)}>Over mij</a>
-            </nav>
         </header>
     );
 }

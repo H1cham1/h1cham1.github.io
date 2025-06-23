@@ -2,7 +2,7 @@ import styles from './Footer.module.css';
 import { FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
 
 function Footer() {
-    const lastUpdated = '15 mei 2025';
+    const lastUpdated = '23 Juni 2025';
 
     return (
         <footer className={styles.footer}>
