@@ -1,7 +1,7 @@
 {
   "name": "mijn-portfolio",
   "version": "0.1.0",
-  "homepage": "https://h1cham1.github.io/Portfolio-Website",
+  "homepage": "https://h1cham1.github.io",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",

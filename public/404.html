@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Redirecting...</title>
+    <script>
+        // Zorg ervoor dat GitHub Pages ongeldige routes doorstuurt naar index.html
+        // zodat React Router kan routeren
+        const redirectTo = window.location.pathname;
+        sessionStorage.redirectPath = redirectTo;
+        window.location.replace('/');
+    </script>
+</head>
+
+<body>
+    <p>Even doorsturen...</p>
+</body>
+
+</html>
