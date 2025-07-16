@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+    --title-font: 'EB Garamond', serif;
+    --body-font: 'Inter', sans-serif;
+}
+
+/* === BASIS === */
+body {
+    font-family: var(--body-font);
+    margin: 0;
+    padding: 0;
+    background: #cfe3ff;
+}
+
+.page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+    padding: 40px 0;
+    box-sizing: border-box;
+}
+
+/* === HERO === */
+.heroInner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 80px;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 24px;
+    box-sizing: border-box;
+}
+
+.heroText {
+    flex: 1 1 500px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #000;
+}
+
+.heroText h1 {
+    font-family: var(--title-font);
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #003366;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.heroText p {
+    font-size: 1.1rem;
+    color: #000;
+    line-height: 1.6;
+    font-family: var(--body-font);
+    text-align: left;
+}
+
+.ctaButton {
+    margin-top: 30px;
+    display: inline-block;
+    background: linear-gradient(to right, #003366, #0059b3);
+    background-size: 200% auto;
+    background-position: left center;
+    color: white;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(0, 51, 102, 0.25);
+    transition: background-position 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: var(--body-font);
+}
+
+.ctaButton:hover {
+    background-position: right center;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(0, 51, 102, 0.35);
+}
+
+.heroImageWrapper {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.heroImage {
+    max-width: 280px;
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* === SECTION BLOKKEN (glassmorphism) === */
+.section {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+    max-width: 1100px;
+    box-sizing: border-box;
+}
+
+.section h2 {
+    font-size: 2rem;
+    color: #003366;
+    text-align: center;
+    font-family: var(--body-font);
+    margin-top: 0;
+    margin-bottom: 4px;
+}
+
+.section p {
+    margin-top: 0;
+    margin-bottom: 24px;
+    text-align: center;
+    max-width: 700px;
+}
+
+/* === OVER MIJ === */
+.intro {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: var(--body-font);
+}
+
+.blocks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+}
+
+.block {
+    flex: 1 1 calc(33.33% - 20px);
+    background-color: #e6f0ff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    font-family: var(--body-font);
+}
+
+.block h3 {
+    margin-bottom: 10px;
+    color: #003366;
+}
+
+.timeline {
+    list-style-type: none;
+    padding-left: 0;
+    line-height: 1.6;
+}
+
+/* === PROJECTEN === */
+.projectGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    width: 100%;
+}
+
+.projectCard {
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    font-family: var(--body-font);
+}
+
+.projectCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.projectCard img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.projectContent {
+    padding: 16px;
+}
+
+.projectCard h3 {
+    margin: 10px 0 8px;
+}
+
+.projectCard small {
+    color: #007bff;
+}
+
+.viewMore {
+    display: inline-block;
+    margin-top: 8px;
+    color: #003366;
+    font-weight: bold;
+}
+
+/* === CONTACT === */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    font-family: var(--body-font);
+}
+
+.form input,
+.form textarea,
+.form button {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.form input:focus,
+.form textarea:focus {
+    outline: none;
+}
+
+.form input {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.form textarea {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    min-height: 160px;
+}
+
+.form button {
+    padding: 12px;
+    font-weight: bold;
+    border: none;
+    background-color: #003366;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.form button:hover {
+    background-color: #002244;
+}
+
+/* === SOCIALS === */
+.socials {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.socials a {
+    color: #003366;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+.socials a:hover {
+    text-decoration: underline;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .block {
+        flex: 1 1 100%;
+    }
+
+    .heroInner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .heroText h1 {
+        font-size: 2rem;
+    }
+}

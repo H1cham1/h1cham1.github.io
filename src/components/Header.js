@@ -5,20 +5,30 @@ function Header() {
     const navigate = useNavigate();
     const location = useLocation();
 
-    const handleHomeClick = () => {
-        if (location.pathname !== '/') {
-            document.body.classList.add('slide-down');
-
-            setTimeout(() => {
-                document.body.classList.remove('slide-down');
-                navigate('/');
-            }, 500);
+    const scrollToSection = (id) => {
+        const el = document.getElementById(id);
+        if (el) {
+            el.scrollIntoView({ behavior: 'smooth' });
         }
     };
 
-    const handleNavigate = (path) => {
-        if (location.pathname !== path) {
-            navigate(path);
+    const handleNavClick = (id) => {
+        if (location.pathname === '/') {
+            scrollToSection(id);
+        } else {
+            // Navigeer naar home en scroll na vertraging
+            navigate('/');
+            setTimeout(() => {
+                scrollToSection(id);
+            }, 300);
+        }
+    };
+
+    const handleHomeClick = () => {
+        if (location.pathname !== '/') {
+            navigate('/');
+        } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     };
 
@@ -27,9 +37,9 @@ function Header() {
             <div className={styles.headerInner}>
                 <button onClick={handleHomeClick} className={styles.logo}>Home</button>
                 <nav className={styles.navLinks}>
-                    <button onClick={() => handleNavigate('/projecten')} className={styles.logo}>Projecten</button>
-                    <button onClick={() => handleNavigate('/contact')} className={styles.logo}>Contact</button>
-                    <button onClick={() => handleNavigate('/over')} className={styles.logo}>Over mij</button>
+                    <button onClick={() => handleNavClick('over')} className={styles.logo}>Over mij</button>
+                    <button onClick={() => handleNavClick('projecten')} className={styles.logo}>Projecten</button>
+                    <button onClick={() => handleNavClick('contact')} className={styles.logo}>Contact</button>
                 </nav>
             </div>
         </header>
