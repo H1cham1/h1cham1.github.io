@@ -174,57 +174,6 @@ body {
     line-height: 1.6;
 }
 
-/* === PROJECTEN === */
-.projectGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-    width: 100%;
-}
-
-.projectCard {
-    background-color: #f5f5f5;
-    border-radius: 12px;
-    overflow: hidden;
-    text-decoration: none;
-    color: inherit;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    display: flex;
-    flex-direction: column;
-    font-family: var(--body-font);
-}
-
-.projectCard:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-}
-
-.projectCard img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-.projectContent {
-    padding: 16px;
-}
-
-.projectCard h3 {
-    margin: 10px 0 8px;
-}
-
-.projectCard small {
-    color: #007bff;
-}
-
-.viewMore {
-    display: inline-block;
-    margin-top: 8px;
-    color: #003366;
-    font-weight: bold;
-}
-
 /* === CONTACT === */
 .form {
     display: flex;
