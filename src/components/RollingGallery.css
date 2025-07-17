@@ -1,0 +1,61 @@
+.marquee-container {
+    overflow: hidden;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.marquee-content {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: marquee 60s linear infinite;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-width: 260px;
+    max-width: 260px;
+    padding: 16px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-tag {
+    color: #007bff;
+    font-weight: 500;
+    font-size: 0.8rem;
+    margin-bottom: 6px;
+}
+
+.project-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #003366;
+}
+
+.project-desc {
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.4;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}

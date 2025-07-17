@@ -3,6 +3,7 @@ import emailjs from 'emailjs-com';
 import projects from '../data/projects';
 import styles from './LandingPage.module.css';
 import Motion from '../assets/Motion.jpg';
+import RollingGallery from '../components/RollingGallery';
 
 function LandingPage() {
     const form = useRef();
@@ -94,26 +95,10 @@ function LandingPage() {
                 </div>
             </section>
 
-            {/* PROJECTEN */}
             <section id="projecten" className={styles.section}>
-                <div className={styles.sectionHeader}>
-                    <h2>Projecten</h2>
-                </div>
-                <div className={styles.projectGrid}>
-                    {projects.map((project, index) => (
-                        <a key={index} href={`/projecten/${project.slug}`} className={styles.projectCard}>
-                            <div className={styles.projectImageWrapper}>
-                                <img src={project.image} alt={project.title} />
-                            </div>
-                            <div className={styles.projectContent}>
-                                <small className={styles.projectTag}>{project.tag}</small>
-                                <h3>{project.title}</h3>
-                                <p>{project.description.length > 90 ? project.description.slice(0, 90) + "..." : project.description}</p>
-                                <span className={styles.viewMore}>Bekijk project →</span>
-                            </div>
-                        </a>
-                    ))}
-                </div>
+                <h2>Projecten</h2>
+                <p>Bekijk hier een selectie van mijn projecten. Scroll horizontaal of laat het vanzelf voorbijgaan.</p>
+                <RollingGallery projects={projects} />
             </section>
 
             {/* CONTACT */}
