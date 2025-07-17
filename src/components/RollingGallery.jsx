@@ -1,31 +1,38 @@
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import "./RollingGallery.css"; // Vergeet niet dit CSS-bestand te importeren
+import "./RollingGallery.css";
 
-const RollingGallery = ({ projects = [], speed = 50, pauseOnHover = true }) => {
+const RollingGallery = ({ projects = [], speed = 1, pauseOnHover = true }) => {
     const containerRef = useRef(null);
     const animationRef = useRef(null);
     const isPaused = useRef(false);
+    const manualScrollTimer = useRef(null);
 
     useEffect(() => {
         const container = containerRef.current;
-        let scrollAmount = 0;
 
-        const animate = () => {
-            if (!isPaused.current) {
-                scrollAmount += 1;
-                if (scrollAmount >= container.scrollWidth / 2) {
-                    scrollAmount = 0;
+        const autoScroll = () => {
+            if (!isPaused.current && container) {
+                container.scrollLeft += speed;
+                if (container.scrollLeft >= container.scrollWidth / 2) {
+                    container.scrollLeft = 0;
                 }
-                container.scrollLeft = scrollAmount;
             }
-            animationRef.current = requestAnimationFrame(animate);
+            animationRef.current = requestAnimationFrame(autoScroll);
         };
 
-        animationRef.current = requestAnimationFrame(animate);
+        animationRef.current = requestAnimationFrame(autoScroll);
 
         return () => cancelAnimationFrame(animationRef.current);
-    }, []);
+    }, [speed]);
+
+    const handleManualScroll = () => {
+        isPaused.current = true;
+        clearTimeout(manualScrollTimer.current);
+        manualScrollTimer.current = setTimeout(() => {
+            isPaused.current = false;
+        }, 2000); // 2 seconden pauze na handmatig scrollen
+    };
 
     const handleMouseEnter = () => {
         if (pauseOnHover) isPaused.current = true;
@@ -41,9 +48,21 @@ const RollingGallery = ({ projects = [], speed = 50, pauseOnHover = true }) => {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
-            <div className="marquee-content" ref={containerRef}>
+            {/* Fade edges */}
+            <div className="marquee-fade marquee-fade-left" />
+            <div className="marquee-fade marquee-fade-right" />
+
+            <div
+                className="marquee-content"
+                ref={containerRef}
+                onScroll={handleManualScroll}
+            >
                 {[...projects, ...projects].map((project, i) => (
-                    <Link to={`/projecten/${project.slug}`} key={i} className="project-card">
+                    <Link
+                        to={`/projecten/${project.slug}`}
+                        key={i}
+                        className="project-card"
+                    >
                         <small className="project-tag">{project.tag}</small>
                         <h3 className="project-title">{project.title}</h3>
                         <p className="project-desc">

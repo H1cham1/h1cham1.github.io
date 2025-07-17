@@ -95,10 +95,10 @@ function LandingPage() {
                 </div>
             </section>
 
+            {/* PROJECTEN */}
             <section id="projecten" className={styles.section}>
                 <h2>Projecten</h2>
-                <p>Bekijk hier een selectie van mijn projecten. Scroll horizontaal of laat het vanzelf voorbijgaan.</p>
-                <RollingGallery projects={projects} />
+                <RollingGallery projects={projects} speed={20000000} />
             </section>
 
             {/* CONTACT */}
@@ -111,7 +111,7 @@ function LandingPage() {
                     <input type="email" name="email" placeholder="Je e-mailadres" required />
                     <input type="text" name="title" placeholder="Onderwerp" required />
                     <textarea name="message" placeholder="Je bericht..." required />
-                    <button type="submit">{renderButtonText()}</button>
+                    <button type="submit" className={styles.ctaButton}>{renderButtonText()}</button>
                 </form>
             </section>
         </div>

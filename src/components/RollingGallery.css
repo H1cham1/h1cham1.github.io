@@ -1,7 +1,11 @@
 .marquee-container {
+    position: relative;
     overflow: hidden;
     width: 100%;
     padding: 20px 0;
+    border-radius: 16px;
+    /* Matcht je .section radius */
+    box-sizing: border-box;
 }
 
 .marquee-content {
@@ -35,6 +39,7 @@
     font-weight: 500;
     font-size: 0.8rem;
     margin-bottom: 6px;
+    text-align: center;
 }
 
 .project-title {
@@ -42,6 +47,7 @@
     font-weight: 600;
     margin-bottom: 6px;
     color: #003366;
+    text-align: center;
 }
 
 .project-desc {
@@ -49,6 +55,28 @@
     color: #444;
     line-height: 1.4;
 }
+
+.marquee-fade {
+    position: absolute;
+    top: 0;
+    width: 15px;
+    /* eerder was 48px */
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.marquee-fade-left {
+    left: 0;
+    background: linear-gradient(to right, rgba(207, 227, 255, 0.8), rgba(207, 227, 255, 0));
+}
+
+.marquee-fade-right {
+    right: 0;
+    background: linear-gradient(to left, rgba(207, 227, 255, 0.8), rgba(207, 227, 255, 0));
+}
+
+
 
 @keyframes marquee {
     0% {

@@ -8,7 +8,9 @@ function Header() {
     const scrollToSection = (id) => {
         const el = document.getElementById(id);
         if (el) {
-            el.scrollIntoView({ behavior: 'smooth' });
+            const yOffset = id === 'contact' ? -95 : -133;
+            const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
         }
     };
 
